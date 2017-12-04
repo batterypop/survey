@@ -1,6 +1,10 @@
 module ::Kernel
   def rails4?
-    return defined?(Rails) && Rails::VERSION::MAJOR == 4
+    return defined?(Rails) && Rails::VERSION::MAJOR >= 4
+  end
+
+  def rails5?
+    return defined?(Rails) && Rails::VERSION::MAJOR == 5
   end
 
   def in_rails_3(&block)
